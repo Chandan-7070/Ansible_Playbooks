@@ -1,0 +1,9 @@
+04-Install Httpd.yml
+# write a paybook to install a httpd package in a playbook
+---
+- hosts: all
+  tasks: 
+   - name: install httpd package
+     yum: 
+      name: httpd
+      state: latest 
