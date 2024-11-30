@@ -1,0 +1,13 @@
+Install-Httpd-Start-Service.yml
+# Write a playbook to install Httpd package in all nodes and start it
+--- 
+hosts: all
+tasks: 
+ - name: install httpd package
+   yum: 
+    name: httpd
+    state: latest
+ -   name: install httpd package
+     service: 
+      name: httpd
+      state: started
